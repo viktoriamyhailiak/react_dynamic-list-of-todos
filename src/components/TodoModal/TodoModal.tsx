@@ -17,7 +17,7 @@ export const TodoModal: React.FC<Props> = ({ selected, onDelete }) => {
     getUser(selected.userId)
       .then(x => setUser(x))
       .finally(() => setIsLoading(false));
-  }, [user]);
+  }, [user, selected.userId]);
 
   return (
     <div className="modal is-active" data-cy="modal">
