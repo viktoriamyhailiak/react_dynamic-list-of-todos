@@ -11,7 +11,7 @@ import { getTodos } from './api';
 import { Todo } from './types/Todo';
 
 export const App: React.FC = () => {
-  const [isloading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [todos, setTodos] = useState<Todo[]>([]);
   const [selected, setSelected] = useState<Todo | null>(null);
   const [field, setField] = useState<string>('all');
@@ -77,7 +77,7 @@ export const App: React.FC = () => {
             </div>
 
             <div className="block">
-              {isloading ? (
+              {isLoading ? (
                 <Loader />
               ) : (
                 <TodoList
